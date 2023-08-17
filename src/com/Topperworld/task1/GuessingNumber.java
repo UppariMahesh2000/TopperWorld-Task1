@@ -11,14 +11,13 @@ public class GuessingNumber {
 		System.out.println(" You have Maximum 5 Attempts Limit .");
 		Random random =new Random();
 		Scanner scanner =new Scanner(System.in);
-		
 		int randomNumber =random.nextInt(100)+1;
 		//System.out.println(" randomNumber is "+ randomNumber);
-		
 		int trycount=0;
 		while(true) {
 		System.out.println(" Enter your GUessnumber Between 1-100 : ");
 		int playerGuess = scanner.nextInt();
+		trycount++;
 		
 		if(playerGuess==randomNumber) {
 			System.out.println(" OOhhOO! ,YOUR NUMBER IS CORRECT .YOU WIN THE GAME ");
@@ -34,5 +33,4 @@ public class GuessingNumber {
 		}
 		scanner.close();
 	}
-
 }
